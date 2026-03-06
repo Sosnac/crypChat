@@ -1,0 +1,17 @@
+import * as FileSystem from 'expo-file-system';
+import Share from 'react-native-share';
+
+const exportBackup = async (privateKey, chatDatabase, backupPassword) => {
+  // 1. Stringify the sensitive data
+  const dataToExport = JSON.stringify({ key: privateKey, chats: chatDatabase });
+  
+  // 2. Encrypt the backup with a password the user provides
+  const encryptedBackup = encryptWithPassword(dataToExport, backupPassword);
+  
+  // 3. Write to a local file
+  const fileUri = FileSystem.documentDirectory + 'crypchat_backup.cryp';
+  await FileSystem.writeAsStringAsync(fileUri, encryptedBackup);
+  
+  // 4. Open the 'Share' menu so user can save it to Cloud or Drive
+  await Share.open({ url: fileUri, title: 'Save your crypChat Backup' });
+};
