@@ -1,0 +1,5 @@
+const userSchema = new mongoose.Schema({
+  username: { type: String, unique: true, required: true },
+  password: { type: String, required: true }, // Should be hashed with bcrypt
+  createdAt: { type: Date, default: Date.now }
+});
