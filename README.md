@@ -53,7 +53,16 @@ Make sure your code lints.
 Issue that pull request!
 Code of Conduct
 By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
-EOF
-echo "✅ CONTRIBUTING.md created successfully!"
+**EOF**
+**echo "✅ CONTRIBUTING.md created successfully!"**
 echo "💪🏾🔥 All done! Your project docs are fully set up and ready to push."
+
+
+## 📞 Contact
+
+**David Sosnac - Lead Developer & Creator**
+**Email: sosnacdavid@gmail.com**
+**WhatsApp: +260951701106**
+**GitHub: @David Sosnac**
+**Project Link: https://github.com/Sosnac/crypChat**
 
