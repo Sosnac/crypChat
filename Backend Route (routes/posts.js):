@@ -1,0 +1,33 @@
+const express = require('express');
+const router = express.Router();
+const { Post } = require('../models/Post'); // The schema we created earlier
+
+// Create a new post
+router.post('/create', async (req, res) => {
+  try {
+    const { username, content, mediaUrl } = req.body;
+    
+    const newPost = new Post({
+      author: username,
+      content: content,
+      mediaUrl: mediaUrl,
+    });
+
+    await newPost.save();
+    res.status(201).json({ message: 'Post created successfully!', post: newPost });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to create post' });
+  }
+});
+
+// Fetch all posts for the feed
+router.get('/feed', async (req, res) => {
+  try {
+    const posts = await Post.find().sort({ createdAt: -1 });
+    res.json(posts);
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching feed' });
+  }
+});
+
+module.exports = router;
