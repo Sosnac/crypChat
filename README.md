@@ -15,7 +15,7 @@ Step 2: Implementation of Core Features
 1. Real-time Messaging & Voice Notes
 We use Socket.io for instant text delivery. For voice notes, the app records audio, uploads the file to a server, and sends the URL via the socket.
 2. Video & Voice Calls (WebRTC)
-WebRTC allows peer-to-peer communication. You will need a STUN/TURN server to help users connect through firewalls.
+WebRTC allows peer-to-peer communication. I will need a STUN/TURN server to help users connect through firewalls.
 Signaling: The server tells User B that User A is calling.
 Stream: The browser/app captures getUserMedia() and sends the stream to the peer.
 3. Status Updates (24-hour Expiry)
