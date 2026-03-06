@@ -1,0 +1,18 @@
+-- 1. Create the Messages Table
+CREATE TABLE IF NOT EXISTS encrypted_messages (
+    id TEXT PRIMARY KEY,
+    sender_username TEXT,
+    recipient_username TEXT,
+    encrypted_text TEXT, -- The 'garbage' text from the RSA/AES process
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status TEXT -- 'sent', 'delivered', 'seen'
+);
+
+-- 2. Fetch Chat History for a specific user
+SELECT * FROM encrypted_messages 
+WHERE (sender_username = ? AND recipient_username = ?) 
+   OR (sender_username = ? AND recipient_username = ?) 
+ORDER BY timestamp ASC;
+
+-- 3. Delete old messages (to save phone space)
+DELETE FROM encrypted_messages WHERE timestamp < date('now','-30 days');
