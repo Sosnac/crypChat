@@ -1,0 +1,35 @@
+const express = require('express');
+const http = require('http');
+const mongoose = require('mongoose');
+const { Server } = require('socket.io');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
+const app = express();
+app.use(express.json());
+const server = http.createServer(app);
+const io = new Server(server, { cors: { origin: "*" } });
+
+// --- Socket.io for Real-time Messaging & Signaling ---
+io.on('connection', (socket) => {
+  // Join private room based on username
+  socket.on('join', (username) => {
+    socket.join(username);
+  });
+
+  // Signaling for Video Calls (WebRTC)
+  socket.on('call-user', ({ to, offer, from }) => {
+    io.to(to).emit('incoming-call', { offer, from });
+  });
+
+  socket.on('answer-call', ({ to, answer }) => {
+    io.to(to).emit('call-accepted', { answer });
+  });
+
+  // Text Messaging
+  socket.on('send-msg', (data) => {
+    io.to(data.to).emit('receive-msg', data);
+  });
+});
+
+server.listen(3000, () => console.log('Backend running on port 3000'));
