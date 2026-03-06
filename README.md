@@ -2,7 +2,10 @@
 
 **Created By**: **David Sosnac**
 
-**Privacy-first social networking. No emails. No phone numbers. Just code.**
+⚡**Privacy-first social networking**. 
+⚡**No emails**. 
+⚡**No phone numbers**. 
+⚡**Just code.**
 
 ## 🚀 Features
 - **Zero-PII Auth:** Register with just a username and password.
