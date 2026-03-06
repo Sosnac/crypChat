@@ -1,0 +1,24 @@
+const admin = require('firebase-admin');
+
+// Function to notify user of a call
+const sendCallNotification = async (targetToken, callerName) => {
+  const message = {
+    token: targetToken,
+    notification: {
+      title: 'Incoming Call',
+      body: `${callerName} is calling you on crypChat...`,
+    },
+    data: {
+      type: 'VOICE_CALL',
+      caller: callerName,
+    },
+    android: { priority: 'high' },
+  };
+
+  try {
+    await admin.messaging().send(message);
+    console.log('Notification sent');
+  } catch (error) {
+    console.error('Error sending notification:', error);
+  }
+};
