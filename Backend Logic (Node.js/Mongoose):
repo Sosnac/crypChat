@@ -1,0 +1,26 @@
+const GroupSchema = new mongoose.Schema({
+  name: String,
+  creator: String, // Username
+  admins: [String], // Array of usernames
+  members: [String],
+  groupIcon: String
+});
+
+// Middleware to check if a user is an admin
+const isAdmin = async (req, res, next) => {
+  const group = await Group.findById(req.body.groupId);
+  if (group.admins.includes(req.user.username)) {
+    next();
+  } else {
+    res.status(403).json({ error: "Only admins can perform this action" });
+  }
+};
+
+// Admin Route: Remove a member
+router.post('/remove-member', protect, isAdmin, async (req, res) => {
+  const { groupId, memberToRemove } = req.body;
+  await Group.findByIdAndUpdate(groupId, {
+    $pull: { members: memberToRemove, admins: memberToRemove }
+  });
+  res.json({ message: "Member removed" });
+});
