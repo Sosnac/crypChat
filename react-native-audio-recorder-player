@@ -1,0 +1,29 @@
+import AudioRecorderPlayer from 'react-native-audio-recorder-player';
+
+const audioRecorderPlayer = new AudioRecorderPlayer();
+
+const onStartRecord = async () => {
+  const result = await audioRecorderPlayer.startRecorder();
+  audioRecorderPlayer.addRecordBackListener((e) => {
+    console.log('Recording time: ', e.currentPosition);
+    return;
+  });
+  console.log(result);
+};
+
+const onStopRecord = async () => {
+  const result = await audioRecorderPlayer.stopRecorder();
+  audioRecorderPlayer.removeRecordBackListener();
+  
+  // Create Form Data to upload the file
+  const formData = new FormData();
+  formData.append('file', {
+    uri: result,
+    type: 'audio/mp4',
+    name: 'voicenote.mp4',
+  });
+
+  // After upload, send the URL via Socket.io
+  const response = await uploadToServer(formData);
+  socket.emit('send_message', { type: 'voice', url: response.url });
+};
