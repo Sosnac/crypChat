@@ -1,0 +1,16 @@
+router.get('/search', protect, async (req, res) => {
+  const query = req.query.username;
+  
+  try {
+    // Find users whose name starts with the query, case-insensitive
+    const users = await User.find({ 
+      username: { $regex: `^${query}`, $options: 'i' } 
+    })
+    .select('username') // Only return usernames, not hashed passwords
+    .limit(10);
+
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: 'Search failed' });
+  }
+});
