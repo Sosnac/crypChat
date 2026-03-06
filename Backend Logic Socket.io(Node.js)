@@ -1,0 +1,27 @@
+io.on('connection', (socket) => {
+  // User joins a specific group
+  socket.on('join_group', (groupId) => {
+    socket.join(groupId);
+    console.log(`User joined group: ${groupId}`);
+  });
+
+  // Sending a message to the group
+  socket.on('send_group_msg', (data) => {
+    const { groupId, message, sender } = data;
+    
+    // Broadcast to everyone in the room except the sender
+    socket.to(groupId).emit('receive_group_msg', {
+      text: message,
+      sender: sender,
+      timestamp: new Date()
+    });
+  });
+  
+  // Handling Group Voice Notes
+  socket.on('send_group_voice', (data) => {
+    socket.to(data.groupId).emit('receive_group_voice', {
+      audioUrl: data.url,
+      sender: data.sender
+    });
+  });
+});
