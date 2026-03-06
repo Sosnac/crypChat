@@ -24,11 +24,11 @@
 - **Storage:** Cloudinary (Media)
 
 ## 📦 Installation
-1. Clone the repo: `git clone https://github.com/Sosnac/crypChat.git`
-2. Install Backend: `cd backend && npm install`
-3. Install Frontend: `cd frontend && npm install`
-4. Create a `.env` file with `JWT_SECRET`, `MONGO_URI`, and `CLOUDINARY_URL`.
-5. Start: `npm start`
+1. **Clone the repo**: `git clone https://github.com/Sosnac/crypChat.git`
+2. **Install Backend**: `cd backend && npm install`
+3. **Install Frontend**: `cd frontend && npm install`
+4. **Create a `.env` file with**`JWT_SECRET`, `MONGO_URI`, **and** `CLOUDINARY_URL`.
+5. **Start**: `npm start`
 
 ## 🔒 Security Architecture
 crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. Private keys are stored in the device's Secure Enclave.
