@@ -1,0 +1,5 @@
+const statusSchema = new mongoose.Schema({
+  userId: mongoose.Schema.Types.ObjectId,
+  content: String, // URL to image/video or text
+  createdAt: { type: Date, default: Date.now, expires: 86400 } // 86400 seconds = 24h
+});
