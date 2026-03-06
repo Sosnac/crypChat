@@ -27,3 +27,33 @@
 ## 🔒 Security Architecture
 crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. Private keys are stored in the device's Secure Enclave.
 
+## GENERATE CONTRIBUTING.md
+---------------------------------------------------------
+**echo "🤝 Writing CONTRIBUTING.md...**"
+**cat << 'EOF' > CONTRIBUTING.md**
+## Contributing to crypChat 🛡️
+First off, thank you for taking the time to contribute! 🎉
+The following is a set of guidelines for contributing to **crypChat**. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+**How Can I Contribute**?
+**Reporting Bugs**
+This section guides you through submitting a bug report for crypChat. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
+Use a clear and descriptive title for the issue to identify the problem.
+Describe the exact steps which reproduce the problem in as many details as possible.
+Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+Explain which behavior you expected to see instead and why.
+Suggesting Enhancements
+Use a clear and descriptive title for the issue to identify the suggestion.
+Provide a step-by-step description of the suggested enhancement in as many details as possible.
+Explain why this enhancement would be useful to most crypChat users.
+Pull Requests
+Fork the repo and create your branch from main.
+If you've added code that should be tested, add tests.
+Ensure the test suite passes.
+Make sure your code lints.
+Issue that pull request!
+Code of Conduct
+By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
+EOF
+echo "✅ CONTRIBUTING.md created successfully!"
+echo "💪🏾🔥 All done! Your project docs are fully set up and ready to push."
+
