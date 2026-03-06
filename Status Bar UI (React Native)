@@ -1,0 +1,41 @@
+import React from 'react';
+import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from 'react-native';
+
+const StatusHeader = ({ statuses, onAddStatus, onViewStatus }) => {
+  return (
+    <View style={styles.container}>
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={statuses}
+        keyExtractor={(item) => item.id}
+        ListHeaderComponent={() => (
+          <TouchableOpacity style={styles.statusItem} onPress={onAddStatus}>
+            <View style={styles.addIconContainer}>
+              <Text style={styles.addIcon}>+</Text>
+            </View>
+            <Text style={styles.username}>Your Status</Text>
+          </TouchableOpacity>
+        )}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.statusItem} onPress={() => onViewStatus(item)}>
+            <View style={styles.avatarBorder}>
+              <Image source={{ uri: item.avatar }} style={styles.avatar} />
+            </View>
+            <Text style={styles.username}>{item.username}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { paddingVertical: 10, borderBottomWidth: 0.5, borderColor: '#ccc' },
+  statusItem: { alignItems: 'center', marginHorizontal: 8 },
+  avatarBorder: { borderWidth: 2, borderColor: '#075e54', borderRadius: 35, padding: 2 },
+  avatar: { width: 60, height: 60, borderRadius: 30 },
+  addIconContainer: { width: 60, height: 60, borderRadius: 30, backgroundColor: '#ddd', justifyContent: 'center', alignItems: 'center' },
+  addIcon: { fontSize: 30, color: '#555' },
+  username: { fontSize: 12, marginTop: 4 }
+});
