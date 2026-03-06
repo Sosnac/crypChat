@@ -1,4 +1,5 @@
 # crypChat 🛡️
+**Created By**: **David Sosnac**
 **Privacy-first social networking. No emails. No phone numbers. Just code.**
 
 ## 🚀 Features
