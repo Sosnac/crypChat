@@ -15,7 +15,7 @@
 - **Storage:** Cloudinary (Media)
 
 ## 📦 Installation
-1. Clone the repo: `git clone https://github.com/user/crypchat.git`
+1. Clone the repo: `git clone https://github.com/Sosnac/crypchat.git`
 2. Install Backend: `cd backend && npm install`
 3. Install Frontend: `cd frontend && npm install`
 4. Create a `.env` file with `JWT_SECRET`, `MONGO_URI`, and `CLOUDINARY_URL`.
