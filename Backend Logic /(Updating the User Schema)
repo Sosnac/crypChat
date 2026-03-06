@@ -1,0 +1,14 @@
+// Add these to your UserSchema
+const UserSchema = new mongoose.Schema({
+  username: { type: String, unique: true, required: true },
+  blockedUsers: [String], // Array of usernames this user has blocked
+  isFlagged: { type: Boolean, default: false } // For moderation
+});
+
+// Middleware to filter blocked content
+const hideBlockedContent = (req, res, next) => {
+  const currentUser = req.user;
+  // In your feed query, add:
+  // Post.find({ author: { $nin: currentUser.blockedUsers } })
+  next();
+};
