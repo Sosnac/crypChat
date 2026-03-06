@@ -1,22 +1,26 @@
-# crypChat
-A  Decentralized Social App Project 
-Building a social application like crypChat is an exciting project. Because I want to avoid collecting emails or phone numbers, we will focus on a decentralized or unique-ID-based authentication system and use WebRTC for real-time communication.
-Overview of the Solution
-To build crypChat, I will use a modern tech stack:
-Frontend: React Native (for iOS/Android) or React (Web).
-Backend: Node.js with Express.
-Database: MongoDB (to store usernames, hashed passwords, and posts).
-Real-time Communication: Socket.io (for text/status updates) and WebRTC (for voice/video calls).
-Storage: Cloudinary or AWS S3 (for voice notes and status media).
-Step 1: Authentication Logic (No Email/Phone)
-Since we aren't using traditional contact methods, the username becomes the primary key.
+# crypChat 🛡️
+**Privacy-first social networking. No emails. No phone numbers. Just code.**
 
-Step 2: Implementation of Core Features
-1. Real-time Messaging & Voice Notes
-We use Socket.io for instant text delivery. For voice notes, the app records audio, uploads the file to a server, and sends the URL via the socket.
-2. Video & Voice Calls (WebRTC)
-WebRTC allows peer-to-peer communication. I will need a STUN/TURN server to help users connect through firewalls.
-Signaling: The server tells User B that User A is calling.
-Stream: The browser/app captures getUserMedia() and sends the stream to the peer.
-3. Status Updates (24-hour Expiry)
-To make statuses disappear, we use a TTL (Time To Live) index in MongoDB.
+## 🚀 Features
+- **Zero-PII Auth:** Register with just a username and password.
+- **E2EE Messaging:** End-to-End Encryption for text and voice notes.
+- **Real-time Calls:** High-quality Video/Voice calls via WebRTC.
+- **Disappearing Status:** 24-hour status updates.
+- **Full Control:** Group admin tools and encrypted local backups.
+
+## 🛠️ Tech Stack
+- **Frontend:** React Native (Expo)
+- **Backend:** Node.js, Express, Socket.io
+- **Database:** MongoDB (User/Posts), SQLite (Local Encrypted Chat)
+- **Storage:** Cloudinary (Media)
+
+## 📦 Installation
+1. Clone the repo: `git clone https://github.com/user/crypchat.git`
+2. Install Backend: `cd backend && npm install`
+3. Install Frontend: `cd frontend && npm install`
+4. Create a `.env` file with `JWT_SECRET`, `MONGO_URI`, and `CLOUDINARY_URL`.
+5. Start: `npm start`
+
+## 🔒 Security Architecture
+crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. Private keys are stored in the device's Secure Enclave.
+
