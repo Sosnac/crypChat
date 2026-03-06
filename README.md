@@ -61,8 +61,12 @@ echo "💪🏾🔥 All done! Your project docs are fully set up and ready to pus
 ## 📞 Contact
 
 **David Sosnac - Lead Developer & Creator**
+
 **Email: sosnacdavid@gmail.com**
+
 **WhatsApp: +260951701106**
+
 **GitHub: @David Sosnac**
+
 **Project Link: https://github.com/Sosnac/crypChat**
 
