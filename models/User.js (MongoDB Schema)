@@ -1,0 +1,21 @@
+const mongoose = require('mongoose');
+
+const UserSchema = new mongoose.Schema({
+  username: { type: String, unique: true, required: true },
+  password: { type: String, required: true },
+  publicKey: { type: String }, // For End-to-End Encryption
+  blockedUsers: [{ type: String }],
+  createdAt: { type: Date, default: Date.now }
+});
+
+// Status Schema with 24-hour Auto-Delete (TTL Index)
+const StatusSchema = new mongoose.Schema({
+  author: String,
+  mediaUrl: String,
+  createdAt: { type: Date, default: Date.now, expires: 86400 } // 86400s = 24h
+});
+
+module.exports = { 
+  User: mongoose.model('User', UserSchema),
+  Status: mongoose.model('Status', StatusSchema)
+};
