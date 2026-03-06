@@ -1,0 +1,30 @@
+const ChatSearch = ({ messages }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredResults, setFilteredResults] = useState([]);
+
+  const handleSearch = (text) => {
+    setSearchQuery(text);
+    if (text.trim() === '') {
+      setFilteredResults([]);
+      return;
+    }
+    
+    // Filter locally stored, already-decrypted messages
+    const results = messages.filter(msg => 
+      msg.text.toLowerCase().includes(text.toLowerCase())
+    );
+    setFilteredResults(results);
+  };
+
+  return (
+    <View>
+      <TextInput 
+        placeholder="Search in conversation..." 
+        onChangeText={handleSearch} 
+        style={styles.searchBar}
+      />
+      {/* Displaying match count */}
+      {searchQuery !== '' && <Text>{filteredResults.length} matches found</Text>}
+    </View>
+  );
+};
