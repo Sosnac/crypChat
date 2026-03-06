@@ -1,0 +1,25 @@
+const peers = {}; // Object to store multiple peer connections
+
+// When a new user joins the group call
+socket.on('user_joined_call', async (newUserUsername) => {
+  const pc = new RTCPeerConnection(configuration);
+  peers[newUserUsername] = pc;
+
+  // Add our local stream to this new connection
+  localStream.getTracks().forEach(track => pc.addTrack(track, localStream));
+
+  // Create an offer for the specific new user
+  const offer = await pc.createOffer();
+  await pc.setLocalDescription(offer);
+  
+  socket.emit('send_offer_to_user', {
+    to: newUserUsername,
+    offer: offer
+  });
+});
+
+// Handle receiving multiple streams in the UI
+pc.ontrack = (event) => {
+  // Add stream to a list to render multiple video windows
+  setRemoteStreams((prev) => [...prev, { stream: event.streams[0], id: newUserUsername }]);
+};
