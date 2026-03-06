@@ -1,0 +1,7 @@
+-- Executed on the mobile device via expo-sqlite
+CREATE TABLE IF NOT EXISTS local_chats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sender TEXT,
+    encrypted_payload TEXT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
