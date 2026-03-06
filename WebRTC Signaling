@@ -1,0 +1,35 @@
+import { RTCPeerConnection, RTCSessionDescription } from 'react-native-webrtc';
+
+const configuration = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
+let peerConnection = new RTCPeerConnection(configuration);
+
+// 1. Starting a Call
+const makeCall = async (targetUsername) => {
+  const offer = await peerConnection.createOffer();
+  await peerConnection.setLocalDescription(offer);
+  
+  // Send offer to server
+  socket.emit('call_user', {
+    offer: offer,
+    to: targetUsername,
+    from: myUsername
+  });
+};
+
+// 2. Handling Incoming Call
+socket.on('receive_call', async (data) => {
+  await peerConnection.setRemoteDescription(new RTCSessionDescription(data.offer));
+  const answer = await peerConnection.createAnswer();
+  await peerConnection.setLocalDescription(answer);
+  
+  socket.emit('answer_call', {
+    answer: answer,
+    to: data.from
+  });
+});
+
+// 3. Adding Stream to UI
+peerConnection.onaddstream = (event) => {
+  // Set this stream to your <RTCView /> component
+  setRemoteStream(event.stream);
+};
