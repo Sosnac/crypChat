@@ -1,0 +1,43 @@
+import React, { useState } from 'react';
+import { View, Text, Image, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+
+const SettingsScreen = () => {
+  const [avatar, setAvatar] = useState(null);
+  const [bio, setBio] = useState("");
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.5,
+    });
+
+    if (!result.canceled) {
+      setAvatar(result.assets[0].uri);
+      // Logic to upload to Cloudinary and save URL to MongoDB
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={pickImage} style={styles.avatarContainer}>
+        {avatar ? <Image source={{ uri: avatar }} style={styles.avatar} /> : 
+                  <View style={styles.placeholder}><Text>Add Photo</Text></View>}
+      </TouchableOpacity>
+      
+      <Text style={styles.label}>Bio</Text>
+      <TextInput 
+        style={styles.bioInput} 
+        multiline 
+        placeholder="Tell people about yourself..." 
+        onChangeText={setBio}
+      />
+      
+      <TouchableOpacity style={styles.saveBtn} onPress={saveProfile}>
+        <Text style={styles.saveText}>Save Changes</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
