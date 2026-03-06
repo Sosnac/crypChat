@@ -1,0 +1,26 @@
+import forge from 'node-forge';
+
+// 1. Generate Keys on Registration
+const generateUserKeys = () => {
+  const rsa = forge.pki.rsa;
+  const keypair = rsa.generateKeyPair({ bits: 2048 });
+  const publicKey = forge.pki.publicKeyToPem(keypair.publicKey);
+  const privateKey = forge.pki.privateKeyToPem(keypair.privateKey);
+  
+  // Store privateKey in SecureStore (Encrypted storage on phone)
+  return { publicKey, privateKey };
+};
+
+// 2. Encrypting a Message
+const encryptMessage = (plainText, recipientPublicKeyPem) => {
+  const publicKey = forge.pki.publicKeyFromPem(recipientPublicKeyPem);
+  const encrypted = publicKey.encrypt(plainText);
+  return forge.util.encode64(encrypted);
+};
+
+// 3. Decrypting a Message
+const decryptMessage = (encryptedText, myPrivateKeyPem) => {
+  const privateKey = forge.pki.privateKeyFromPem(myPrivateKeyPem);
+  const decoded = forge.util.decode64(encryptedText);
+  return privateKey.decrypt(decoded);
+};
