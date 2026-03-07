@@ -1,6 +1,6 @@
 ## crypChat 🛡️
 
-**Created By**: **David Sosnac**
+**Created by**: **David Sosnac**
 
 ⚡**Privacy-first social networking**. 
 
