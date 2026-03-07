@@ -78,7 +78,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 ## 🪲Reporting Bugs
 
-** 🧾 This section guides you through submitting a bug report for crypChat**.
+🧾 **This section guides you through submitting a bug report for crypChat**.
 
 Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
