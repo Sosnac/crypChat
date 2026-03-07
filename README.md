@@ -137,7 +137,9 @@ By participating in this project, you are expected to uphold a welcoming and saf
 
 **Facebook**: *David Sosnac*
 
-**GitHub**: @ *David Sosnac*
+**GitHub**:  *David Sosnac*
+
+
 
 ------------------------------------------------
 
