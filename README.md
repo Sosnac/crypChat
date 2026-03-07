@@ -67,13 +67,12 @@ crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. 
 
 ---------------------------------------------------------
 
-## 🤝 Writing CONTRIBUTING.md...
-
 ## Contributing to crypChat🛡️
+
 First off, thank you for taking the time to contribute! 🎉
 The following is a set of guidelines for contributing to **crypChat**. 
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
-**How Can I Contribute**?
+
 
 -------------------------------------------------
 
@@ -115,4 +114,6 @@ By participating in this project, you are expected to uphold a welcoming and saf
 -------------------------------------------------------
 
 **All rights reserved, Copyright ©2026**
+
+--------------------------------------------
 
