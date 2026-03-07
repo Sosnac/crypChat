@@ -91,7 +91,7 @@ Make sure your code lints.
 Issue that pull request!
 Code of Conduct
 By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
- 💪🏾🔥 **All done! Your project docs are fully set up and ready to push**.
+ **💪🏾🔥⚡**
 
 --------------------------------------------------------------------
 
