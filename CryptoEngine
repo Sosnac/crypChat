@@ -1,0 +1,26 @@
+import io from 'socket.io-client';
+import { CryptoEngine } from '../utils/crypto';
+
+const socket = io('https://your-api-url.com');
+
+const sendMessage = async (plainText, recipientUserId, recipientPublicKey) => {
+  try {
+    // 1. Locally encrypt the message using the recipient's Public Key
+    // This ensures only the recipient's Private Key can open it.
+    const encryptedPackage = await CryptoEngine.encryptMessage(
+      plainText, 
+      recipientPublicKey
+    );
+
+    // 2. Emit the encrypted payload over the socket
+    socket.emit('private_message', {
+      to: recipientUserId,
+      from: currentUserId,
+      encryptedPackage: encryptedPackage 
+    });
+
+    console.log("🛡️ Encrypted message sent into the void.");
+  } catch (error) {
+    console.error("Encryption failed:", error);
+  }
+};
