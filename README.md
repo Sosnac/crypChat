@@ -135,9 +135,9 @@ By participating in this project, you are expected to uphold a welcoming and saf
 
 **Email**: *sosnacdavid@gmail.com*
 
-**Facebook**: **[David Sosnac]**
+**Facebook**: *David Sosnac*
 
-**GitHub**:  **[David Sosnac]**
+**GitHub**:  *David Sosnac*
 
 **WhatsApp:** [+260951701106](https://wa.me/260951701106)
 
