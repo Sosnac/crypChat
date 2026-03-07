@@ -76,7 +76,7 @@ To build **crypChat**, I've used a modern tech stack:
 
 ---------------------------------------------------------
 
-## 🎁 Contributing to crypChat🛡️
+## 🎁 Contributing to crypChat
 
 First off, **thank you** for taking the time to contribute! 🎉
 The following is a set of guidelines for contributing to **crypChat**. 
