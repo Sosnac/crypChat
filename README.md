@@ -109,5 +109,5 @@ By participating in this project, you are expected to uphold a welcoming and saf
 **Project Link: https://github.com/Sosnac/crypChat**
 -------------------------------------------------------
 
-**All rights reserved ©2026**
+**All rights reserved, Copyright ©2026**
 
