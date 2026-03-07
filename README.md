@@ -18,7 +18,7 @@ To build crypChat, I've used a modern tech stack:
 
 **Real-time Communication**: Socket.io (for text/status updates) and WebRTC (for voice/video calls).
 
-**Storage**: Cloudinary or AWS S3 (for voice notes and status media.
+**Storage**: Cloudinary (for voice notes and status media).
 
 **Creator**: **David Sosnac**
 
