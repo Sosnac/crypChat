@@ -1,5 +1,4 @@
 ----------------------------------------------------------
-## 🔐crypChat 🛡️
 
 <h1 align="center">crypChat 🛡️</h1>
 <p align="center"><strong>Privacy-first social networking. No emails. No phone numbers. Just code.</strong></p>
