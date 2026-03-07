@@ -1,12 +1,18 @@
 ## 🔐crypChat 🛡️
 
 Building a social application like crypChat is one of my exciting project. Because I want to avoid collecting emails or phone numbers, I will focus on a decentralized or unique-ID-based authentication system and use WebRTC for real-time communication.
+
 **Overview of the Solution**
 To build crypChat, I've used a modern tech stack:
+
 **Frontend**: React Native (for iOS/Android) or React (Web).
+
 **Backend**: Node.js with Express.
+
 **Database**: MongoDB (to store usernames, hashed passwords, and posts).
+
 **Real-time Communication**: Socket.io (for text/status updates) and WebRTC (for voice/video calls).
+
 **Storage**: Cloudinary or AWS S3 (for voice notes and status media.
 
 **Created by**: **David Sosnac**
