@@ -130,7 +130,6 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 ## ⚔️ Code of Conduct
 
 By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
- **💪🏾🔥⚡**
 
 --------------------------------------------------------------------
 
@@ -145,8 +144,6 @@ By participating in this project, you are expected to uphold a welcoming and saf
 **GitHub**:  *David Sosnac*
 
 **WhatsApp:** [+260951701106](https://wa.me/260951701106)
-
-
 
 ------------------------------------------------
 
