@@ -20,6 +20,8 @@ To build crypChat, I've used a modern tech stack:
 
 **Created by**: **David Sosnac**
 
+## 🗝️ Privacy 
+
 ✅**Privacy-first social networking**. 
 
 ✅**No emails**. 
