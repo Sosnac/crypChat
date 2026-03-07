@@ -55,8 +55,8 @@ crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. 
 
 ## GENERATE CONTRIBUTING.md
 ---------------------------------------------------------
-**echo "🤝 Writing CONTRIBUTING.md...**"
-**cat << 'EOF' > CONTRIBUTING.md**
+**🤝 Writing CONTRIBUTING.md...**
+**CONTRIBUTING.md**
 ## Contributing to crypChat🛡️
 First off, thank you for taking the time to contribute! 🎉
 The following is a set of guidelines for contributing to **crypChat**. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
@@ -79,9 +79,7 @@ Make sure your code lints.
 Issue that pull request!
 Code of Conduct
 By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
-**EOF**
-**echo "✅ CONTRIBUTING.md created successfully!"**
-echo "💪🏾🔥 All done! Your project docs are fully set up and ready to push."
+ 💪🏾🔥 **All done! Your project docs are fully set up and ready to push**.
 
 
 ## 📞 Contact
