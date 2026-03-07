@@ -63,7 +63,7 @@ To build crypChat, I've used a modern tech stack:
 -----------------------------------------------------------
 
 ## 🔒 Security Architecture
-crypChat uses **RSA-2048** for key exchange and **AES-256-GCM** for message encryption. Private keys are stored in the device's Secure Enclave.
+**crypChat** uses **RSA-2048** for key exchange and **AES-256-GCM** for message encryption. Private keys are stored in the device's Secure Enclave.
 
 ---------------------------------------------------------
 
