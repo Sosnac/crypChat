@@ -1,5 +1,6 @@
 ## 🔐crypChat 🛡️
 
+**Building A Decentralized Social App**
 Building a social application like crypChat is one of my exciting project. Because I want to avoid collecting emails or phone numbers, I will focus on a decentralized or unique-ID-based authentication system and use WebRTC for real-time communication.
 
 **Overview of the Solution**:
