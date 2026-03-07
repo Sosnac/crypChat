@@ -64,10 +64,19 @@ To build **crypChat**, I've used a modern tech stack:
 
 ## 📦 Installation
 1. **Clone the repo**: `git clone https://github.com/Sosnac/crypChat.git`
-2. **Install Backend**: `cd backend && npm install`
-3. **Install Frontend**: `cd frontend && npm install`
+2. **Install Backend**:
+```bash
+ cd backend && npm install
+
+3. **Install Frontend**: 
+```bash 
+ cd frontend && npm install
+
 4. **Create a `.env` file with**`JWT_SECRET`, `MONGO_URI`, **and** `CLOUDINARY_URL`.
-5. **Start**: `npm start`
+
+5. **Start Application**: 
+```bash 
+ npm start
 
 -----------------------------------------------------------
 
