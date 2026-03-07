@@ -13,7 +13,7 @@
 
 **Building A Decentralized Social App**:
 
- **crypChat🛡️** is one of my exciting project. In this project I want to avoid collecting emails or phone numbers, I will focus on a decentralized or unique-ID-based authentication system and use **WebRTC** for real-time communication.
+ - **crypChat🛡️** is one of my exciting project. In this project I want to avoid collecting emails or phone numbers, I will focus on a decentralized or unique-ID-based authentication system and use **WebRTC** for real-time communication.
 
 **Overview of the Solution**:
 
