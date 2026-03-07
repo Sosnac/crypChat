@@ -1,4 +1,4 @@
-## crypChat 🛡️
+## 🔐crypChat 🛡️
 
 **Created by**: **David Sosnac**
 
