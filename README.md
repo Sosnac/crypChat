@@ -33,7 +33,7 @@ To build **crypChat**, I've used a modern tech stack:
  
 --------------------------------------------------------
 
-## 🗝️ Privacy 
+## 🛡️ Privacy 
 
 - **Privacy-first social networking**. 
 
@@ -147,7 +147,7 @@ David Sosnac - Lead Developer & Creator
 
 ------------------------------------------------
 
-# 🔗 Project Link:
+## 🔗 Project Link
 
 
  *https://github.com/Sosnac/crypChat*
