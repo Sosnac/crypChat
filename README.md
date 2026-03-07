@@ -10,15 +10,15 @@ Building a social application like **crypChat** is one of my exciting project. B
 
 To build **crypChat**, I've used a modern tech stack:
 
-**Frontend**: React Native (for iOS/Android) or React (Web).
+1.**Frontend**: React Native (for iOS/Android) or React (Web).
 
-**Backend**: Node.js with Express.
+2.**Backend**: Node.js with Express.
 
-**Database**: MongoDB (to store usernames, hashed passwords, and posts).
+3.**Database**: MongoDB (to store usernames, hashed passwords, and posts).
 
-**Real-time Communication**: Socket.io (for text/status updates) and WebRTC (for voice/video calls).
+4.**Real-time Communication**: Socket.io (for text/status updates) and WebRTC (for voice/video calls).
 
-**Storage**: Cloudinary (for voice notes and status media).
+5.**Storage**: Cloudinary (for voice notes and status media).
 
 **Creator**: **David Sosnac**
 
@@ -26,13 +26,13 @@ To build **crypChat**, I've used a modern tech stack:
 
 ## 🗝️ Privacy 
 
-✅**Privacy-first social networking**. 
+-**Privacy-first social networking**. 
 
-✅**No emails**. 
+-**No emails**. 
 
-✅**No phone numbers**. 
+-**No phone numbers**. 
 
-✅**Just code.**
+-**Just code.**
 
 ----------------------------------------------------------
 
