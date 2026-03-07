@@ -123,7 +123,7 @@ By participating in this project, you are expected to uphold a welcoming and saf
 
 **WhatsApp: +260951701106**
 
-**GitHub: @David Sosnac**
+**GitHub: @ David Sosnac**
 
 **Project Link: https://github.com/Sosnac/crypChat**
 -------------------------------------------------------
