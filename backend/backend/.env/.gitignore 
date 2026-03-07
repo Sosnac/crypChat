@@ -1,2 +1,11 @@
 JWT_Secret=zu4IBgWFpVRtJku2FzsdvlhywiU/4XBEJ+uik9kyQiONESUXXVy44ciOYJrjP4ss
 n8A3lboGVShG9HrNiCUDyw==
+
+const cloudinary = require('cloudinary').v2;
+cloudinary.config({
+  cloud_name: 'sample',
+  api_key: '874837483748377',
+  api_secret: 'j6e7GmbGHr38423423423423423',
+  secure: true
+});
+
