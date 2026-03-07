@@ -92,7 +92,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 ## 🪲Reporting Bugs
 
-🧾 **This section guides you through submitting a bug report for crypChat**.
+📜 **This section guides you through submitting a bug report for crypChat**.
 
 - Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
@@ -106,7 +106,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 --------------------------------------------
 
-## 🏹 Suggesting Enhancements
+## ⚒️ Suggesting Enhancements
 
 - Use a clear and descriptive title for the issue to identify the suggestion.
 
@@ -116,7 +116,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 ---------------------------------------------
 
-## 🌐 Pull Requests
+## ⏳ Pull Requests
 
 **Fork the repo and create your branch from main**.
 
@@ -127,7 +127,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 ----------------------------------------------
 
-## 💪🏾Code of Conduct
+## ⚔️ Code of Conduct
 
 By participating in this project, you are expected to uphold a welcoming and safe environment for everyone.
  **💪🏾🔥⚡**
