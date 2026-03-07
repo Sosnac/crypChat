@@ -135,7 +135,7 @@ By participating in this project, you are expected to uphold a welcoming and saf
 
 ## 📞 Contact
 
-**David Sosnac - Lead Developer & Creator**
+David Sosnac - Lead Developer & Creator
 
 **Email**: *sosnacdavid@gmail.com*
 
