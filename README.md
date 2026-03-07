@@ -63,13 +63,13 @@ To build crypChat, I've used a modern tech stack:
 -----------------------------------------------------------
 
 ## 🔒 Security Architecture
-crypChat uses RSA-2048 for key exchange and AES-256-GCM for message encryption. Private keys are stored in the device's Secure Enclave.
+crypChat uses **RSA-2048** for key exchange and **AES-256-GCM** for message encryption. Private keys are stored in the device's Secure Enclave.
 
 ---------------------------------------------------------
 
 ## Contributing to crypChat🛡️
 
-First off, thank you for taking the time to contribute! 🎉
+First off, **thank you** for taking the time to contribute! 🎉
 The following is a set of guidelines for contributing to **crypChat**. 
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
@@ -120,7 +120,6 @@ By participating in this project, you are expected to uphold a welcoming and saf
 
 --------------------------------------------------------------------
 
-
 ## 📞 Contact
 
 **David Sosnac - Lead Developer & Creator**
@@ -130,6 +129,8 @@ By participating in this project, you are expected to uphold a welcoming and saf
 **WhatsApp: +260951701106**
 
 **GitHub: @ David Sosnac**
+
+------------------------------------------------
 
 **Project Link: https://github.com/Sosnac/crypChat**
 -------------------------------------------------------
