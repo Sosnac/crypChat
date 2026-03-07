@@ -20,7 +20,7 @@ To build crypChat, I've used a modern tech stack:
 
 **Storage**: Cloudinary or AWS S3 (for voice notes and status media.
 
-**Created by**: **David Sosnac**
+**Creator**: **David Sosnac**
 
 --------------------------------------------------------
 
