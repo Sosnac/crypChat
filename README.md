@@ -19,7 +19,7 @@ Building a social application like **crypChat** is one of my exciting project. B
 
 To build **crypChat**, I've used a modern tech stack:
 
-1. **Frontend**: React Native (for iOS/Android) or React (Web).
+1. **Frontend**: React Native (for iOS/Android) or React (for Web).
 
 2. **Backend**: Node.js with Express.
 
