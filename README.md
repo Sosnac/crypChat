@@ -89,36 +89,36 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 🧾 **This section guides you through submitting a bug report for crypChat**.
 
-Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
+- Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
-Use a clear and descriptive title for the issue to identify the problem.
+- Use a clear and descriptive title for the issue to identify the problem.
 
-Describe the exact steps which reproduce the problem in as many details as possible.
+- Describe the exact steps which reproduce the problem in as many details as possible.
 
-Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+- Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
 
-Explain which behavior you expected to see instead and why.
+- Explain which behavior you expected to see instead and why.
 
 --------------------------------------------
 
 ## 🏹 Suggesting Enhancements
 
-Use a clear and descriptive title for the issue to identify the suggestion.
+- Use a clear and descriptive title for the issue to identify the suggestion.
 
-Provide a step-by-step description of the suggested enhancement in as many details as possible.
+- Provide a step-by-step description of the suggested enhancement in as many details as possible.
 
-Explain why this enhancement would be useful to most crypChat users.
+- Explain why this enhancement would be useful to most crypChat users.
 
 ---------------------------------------------
 
 ## 🌐 Pull Requests
 
-Fork the repo and create your branch from main.
+**Fork the repo and create your branch from main**.
 
-If you've added code that should be tested, add tests.
-Ensure the test suite passes.
-Make sure your code lints.
-Issue that pull request!
+- If you've added code that should be tested, add tests.
+- Ensure the test suite passes.
+- Make sure your code lints.
+- Issue that pull request!
 
 ----------------------------------------------
 
