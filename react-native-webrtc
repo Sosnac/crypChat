@@ -1,0 +1,95 @@
+import { useState, useEffect } from 'react';
+import { RTCPeerConnection, RTCView, mediaDevices } from 'react-native-webrtc';
+
+const CrypChatVideoCall = () => {
+  const [localStream, setLocalStream] = useState(null);
+  const [remoteStream, setRemoteStream] = useState(null);
+  const [cachedPeerConnection, setCachedPeerConnection] = useState(null);
+
+  // Configuration for STUN servers (helps bypass firewalls)
+  const configuration = {
+    iceServers: [
+      { urls: 'stun:stun.l.google.com:19302' }, 
+      { urls: 'stun:stun1.l.google.com:19302' },
+    ],
+  };
+
+  useEffect(() => {
+    startLocalStream();
+  }, []);
+
+  const startLocalStream = async () => {
+    // 1. Define what media we want
+    const isFrontCamera = true;
+    const devices = await mediaDevices.enumerateDevices();
+
+    const facing = isFrontCamera ? 'front' : 'environment';
+    const videoSourceId = devices.find(
+      (device) => device.kind === 'videoinput' && device.facing === facing
+    );
+
+    const constraints = {
+      audio: true,
+      video: {
+        mandatory: {
+          minWidth: 500, // Provide optimized resolution
+          minHeight: 300,
+          minFrameRate: 30,
+        },
+        facingMode: isFrontCamera ? 'user' : 'environment',
+        optional: videoSourceId ? [{ sourceId: videoSourceId }] : [],
+      },
+    };
+
+    // 2. Capture the stream
+    try {
+      const stream = await mediaDevices.getUserMedia(constraints);
+      setLocalStream(stream);
+    } catch (error) {
+      console.error('Error accessing media devices:', error);
+    }
+  };
+
+  const startCall = async () => {
+    // 3. Initialize Peer Connection
+    const pc = new RTCPeerConnection(configuration);
+
+    // Add local stream tracks to the connection
+    localStream.getTracks().forEach((track) => {
+      pc.addTrack(track, localStream);
+    });
+
+    // Listen for remote stream tracks
+    pc.ontrack = (event) => {
+      setRemoteStream(event.streams[0]);
+    };
+
+    setCachedPeerConnection(pc);
+    
+    // Logic for creating an 'Offer' would go here to send via Socket.io
+  };
+
+  return (
+    <>
+      {/* Display Local Video */}
+      {localStream && (
+        <RTCView
+          streamURL={localStream.toURL()}
+          style={{ width: 150, height: 200, position: 'absolute', zIndex: 1, top: 20, right: 20 }}
+          objectFit="cover"
+        />
+      )}
+
+      {/* Display Remote Video (The person you are calling) */}
+      {remoteStream && (
+        <RTCView
+          streamURL={remoteStream.toURL()}
+          style={{ flex: 1, backgroundColor: '#000' }}
+          objectFit="cover"
+        />
+      )}
+    </>
+  );
+};
+
+export default CrypChatVideoCall;
